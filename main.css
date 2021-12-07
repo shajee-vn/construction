@@ -1,0 +1,410 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*    hero section */
+
+#hero{
+    width: 100%;
+    height: 100vh;
+    background: url(image/build6.jpg) top center;
+    background-size: 100% 100%;
+    position: relative;
+    margin-bottom: -7rem;
+}
+@media (max-width:992){
+    #hero{
+        margin-bottom: -5rem;
+    }
+}
+
+#hero::before{
+    background: rgba(21,5,23,0.5)linear-gradient(rgba(26,0,33,0.5)0%,
+    rgba(26,0,33,0.5)5%, rgba(38,6,51,0.5)40%, rgba(147,47,69,0.7)76%,
+    rgba(236,97,93,0.7)94%, rgba(236,97,93,0.5)100%)
+    repeat scroll 0% 0%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#hero .hero-container{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.hero-container > h1{
+    margin: 0;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: white;
+}
+.hero-container > h2{
+    color: white;
+    margin: 15px 0 0 0;
+    font-size: 24px;
+}
+.hero-container > .main-btn{
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 4px;
+    border: 2px solid white;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+.hero-container > .main-btn:hover{
+    background-color: #36004b;
+    border: 2px solid #270136;
+}
+@media (min-width:1024){
+    #hero{
+        background-attachment: fixed;
+    }
+}
+@media (max-width:760){
+    #hero > h1{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    #hero > h2{
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+/*          nav bar section    */
+
+#navigation{
+    background: #1d0227;
+    padding: 10px 20px;
+    z-index: 100;
+    width: 100%;
+}
+#navigation li{
+    padding: 0 10px;
+}
+#navigation li a{
+    color: white;
+}
+.navbar-brand,
+.navbar-brand:hover{
+    color: white;
+    font-weight: bold;
+}
+.social-links a{
+    padding-left: 20px;
+    color: white;
+}
+.social-links a:hover{
+    color: hsl(13, 100%, 68%);
+}
+.navbar-toggler i{
+    color: white;
+}
+.navbar-toggler{
+    outline: none !important;
+}
+/* this class we use in js */
+
+.fixedNav #navigation{
+    position: fixed;
+    top:0;
+
+} 
+.fixed #navigation{
+    position: fixed;
+    top: 0;
+}
+
+/*      services section   */
+
+.services{
+    padding-bottom: 30px;
+
+}
+.services .des-box{
+    padding: 60px 30px;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    box-shadow: 30px 0 35px 0 rgba(32, 1, 73, 0.12);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    z-index: 1;
+    text-align: center;
+}
+.services .des-box::before{
+    content: "";
+    position: absolute;
+    background: #fd3ff2;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 100%;
+    transition: all 0.4s;
+    
+}
+.services .des-box:hover::before{
+    background: #1d0227;
+    top: 0;
+    border-radius: 0px;
+    color: white !important;
+    z-index: -1;
+}
+.des-box .icon{
+    margin-bottom: 15px;
+}
+.des-box .icon i{
+    font-size: 48px;
+    line-height: 1;
+    color: #ec042e;
+    transition: all 0.3s ease-in-out;
+}
+.services .title{
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.services .title a{
+    color: black;
+}
+.services .description{
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+.services .des-box:hover .title a,
+.services .des-box:hover .description,
+.services .des-box:hover .icon i{
+    color: white !important;
+}
+
+/*      statistics section   */
+
+.stats{
+    background-image: linear-gradient(rgba(21,1,48,0.5),rgba(243,87,87,0.7)), 
+    url(image/build4.jpg);
+    background-size: 100% 100%;
+    padding-top: 100px;
+    padding-bottom: 140px;
+    color: white;
+    background-attachment: fixed;
+    margin-top: 100px;
+}
+.stats i{
+    font-size: 4rem;
+}
+.stats h2{
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 4rem;
+    color: white;
+}
+.stats span{
+    font-weight: bold;
+    letter-spacing: 0.4rem;
+}
+
+/* work section*/ 
+
+.work-list-item{
+    color: black;
+    cursor: pointer;
+    user-select: none;
+}
+.active-item{
+    color: #14010bee;
+}
+
+/*     Our Team   */
+
+.section-bg{
+    background-image: linear-gradient(rgba(21,1,48,0.5), rgba(243,87,87,0.7)),
+    url(image/build1.jpg);
+    background-size: 100% 100%;
+    color: white;
+    background-attachment: fixed;
+    margin-top: 9rem;
+}
+
+.member{
+    margin-bottom: 1.8rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.1);
+}
+.member .member-img{
+    position: relative;
+    overflow: hidden;
+}
+.member .social{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3rem;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+.member .social a{
+    transition: color 0.3s;
+    color: #0f394c;
+    margin: 0 0.3rem;
+    padding-top: 0.6rem;
+    border-radius: 2.5rem;
+    width: 3.5rem;
+    height: 3rem;
+    background: rgba(35,0,75,0.8);
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    color: white;
+}
+.member .social a:hover{
+    background: #76c7ed;
+}
+.member .social i{
+    font-size: 1.8rem;
+}
+.member .member-info{
+    padding: 2.5rem 1.5rem;
+}
+.member .member-info h4{
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #0f394c;
+}
+
+.member .member-info span{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #aaa;
+}
+.member:hover .social{
+    opacity: 1;
+    bottom: 1rem;
+}
+
+/*  footer section  */
+
+#footer .footer-top{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 8rem 0;
+}
+#footer .footer-top h3{
+    font-size: 3.5rem;
+    font-weight: 700;
+     position: relative;
+     padding-bottom: 0;
+     margin-bottom: 0;
+}
+#footer .footer-top p{
+    font-size: 1.4rem;
+    font-style: italic;
+    margin: 3rem 0 0 0;
+    padding: 0;
+}
+#footer .footer-top .footer-newsletter{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 2.8rem;
+}
+#footer .footer-top .footer-newsletter form{
+    background: white;
+    padding: 0.5rem 0.9rem;
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.1);
+}
+/*
+#footer .footer-top .footer-newsletter form input[type="email"]{
+    border: 0;
+    padding: 0.4rem 0.8rem;
+    width: calc(100% - 100px);
+}
+#footer .footer-top .footer-newsletter form input[type="submit"]{
+    position: absolute;
+    top: 0;
+    right: -30px;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    background: #200124;
+    color: white;
+    transition: 0.3s;
+    border-radius: 0 0.4rem 0.4rem 0;
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.1);
+}
+#footer .footer-top .footer-newsletter form input[type="submit"]:hover{
+    background: #ee463a;
+}*/
+#footer .footer-top .social-links{
+    margin-top: 3rem;
+
+}
+#footer .footer-top .social-links a{
+    font-size: 1.6rem;
+    display: inline-block;
+    background: #200124;
+    color: white;
+    line-height: 1;
+    padding: 0.8rem 0;
+    margin-right: 0.4rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    transition: 0.3s;
+}
+#footer .footer-top .social-links a:hover{
+    background: #ee4638;
+}
+#footer .footer-bottom{
+    border-top: 1px solid #200124;
+    z-index: 2;
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+#footer .copyright{
+    float: left;
+}
+#footer .credits{
+    float: right;
+    font-size: 1.3rem;
+}
+
+@media (max-width:770px){
+    #footer .copyright,
+    #footer .credits{
+        float: none;
+    }
+    #footer .credits{
+        padding-top: 0.5rem;
+    }
+}
